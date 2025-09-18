@@ -60,6 +60,15 @@ Widget build(BuildContext context) {
             width: 150,
             height: 150,
           ),
+
+          const SizedBox(height: 20), // spacing
+
+          ElevatedButton(
+            onPressed: () {
+
+            },
+            child: const Text("Toggle Image"),
+          ),
         ],
       ),
     ),
