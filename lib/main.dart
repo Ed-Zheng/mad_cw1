@@ -53,6 +53,8 @@ Widget build(BuildContext context) {
             style: Theme.of(context).textTheme.headlineMedium,
           ),
 
+          const SizedBox(height: 20), // spacing
+
           Image.network(
             'https://minifigs.me/cdn/shop/files/Monkey.jpg?v=1709909553',
             width: 150,
