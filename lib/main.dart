@@ -18,7 +18,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'MAD CW1',
 
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> {
       ),
 
       home: MyHomePage(
-        title: 'Flutter Demo Home Page',
+        title: 'MAD CW1',
         toggleTheme: () {
           setState(() {
             _darkMode = !_darkMode; // toggles the boolean to swap themes
