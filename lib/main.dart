@@ -30,6 +30,9 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
+  // Boolean variable to track image state
+  bool _firstImage = true;
+
   void _incrementCounter() {
     setState(() {
       _counter++;
@@ -55,8 +58,11 @@ Widget build(BuildContext context) {
 
           const SizedBox(height: 20), // spacing
 
+          // Images
           Image.network(
-            'https://minifigs.me/cdn/shop/files/Monkey.jpg?v=1709909553',
+            _firstImage
+              ? 'https://minifigs.me/cdn/shop/files/Monkey.jpg?v=1709909553'
+              : 'https://content.instructables.com/FUE/1173/HXIKE6RJ/FUE1173HXIKE6RJ.jpg?auto=webp&crop=1.2%3A1&frame=1&width=270',
             width: 150,
             height: 150,
           ),
@@ -65,7 +71,9 @@ Widget build(BuildContext context) {
 
           ElevatedButton(
             onPressed: () {
-
+              setState(() {
+                  _firstImage = !_firstImage; // toggles the boolean to swap images
+                });
             },
             child: const Text("Toggle Image"),
           ),
